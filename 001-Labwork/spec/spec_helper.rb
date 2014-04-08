@@ -3,8 +3,6 @@ require 'rspec'
 RSpec.configure do |config|
   config.mock_framework = :rspec
   RSpec.configuration.color = true
-  config.full_backtrace=false
-
 end
 
 def check_class_defined class_name
