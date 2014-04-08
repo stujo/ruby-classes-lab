@@ -112,7 +112,7 @@ describe "#purchases", labStep: "Store Purchase History" do
   let!(:customer) { Customer.new('Bob', 'Holly', Date.new(1965, 1, 1), 6000) }
 
   it "should be defined with attr_reader :purchases" do
-    expect(customer).to respond_to(:purchase_history).with(0).arguments
+    expect(customer).to respond_to(:purchases).with(0).arguments
   end
   it "and should return an empty array for new customers, set @purchases in #initialize" do
     customer.purchases.should eq []
@@ -146,11 +146,15 @@ end
 describe "#purchase_history", labStep: "Generate Purchase History" do
   let!(:customer) { Customer.new('Wally', 'Giffen', Date.new(1980, 5, 1), 100) }
 
-  it "and should return an array with one element after 1 purchase" do
+  it "should be defined" do
+    expect(customer).to respond_to(:purchase_history).with(0).arguments
+  end
+
+  it "and should a string made up of all the purchases joined with '\\n'" do
     customer.attempt_credit_purchase 3, "Birthday Card"
     customer.purchase_history.should eq "Birthday Card"
   end
-  it "and should return an array with two elements after 2 purchases" do
+  it "and should return 'Valentine Card\\nHoliday Card'" do
     customer.attempt_credit_purchase 4, "Valentine Card"
     customer.attempt_credit_purchase 4, "Holiday Card"
     customer.purchase_history.should eq "Valentine Card\nHoliday Card"
@@ -162,4 +166,3 @@ describe "#purchase_history", labStep: "Generate Purchase History" do
     customer.purchase_history.should eq history
   end
 end
-

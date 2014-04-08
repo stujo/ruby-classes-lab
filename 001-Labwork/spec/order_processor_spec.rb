@@ -38,7 +38,7 @@ describe 'OrderProcessor' do
         },
     ]
   }
-  describe "#OrderProcessor.processOrder", labStep: "OrderProcessor Process" do
+  describe "#OrderProcessor.processOrder(customer, items)", labStep: "OrderProcessor Process" do
     it { expect(OrderProcessor).to respond_to(:processOrder).with(2).arguments }
     it "should take 2 parameters, customer and items array" do
       expect(OrderProcessor.processOrder(affluentCustomer, expensiveItems)).to(be_a(String), "Should return a receipt string")

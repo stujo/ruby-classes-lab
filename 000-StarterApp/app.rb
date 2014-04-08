@@ -17,7 +17,8 @@ items = [
 ]
 
 #Get the Receipt
-receipt = processOrder customer, items
+# The processOrder method is contained in 'lib/process_customer' file.
+receipt = processOrder(customer, items)
 
 #Print it out!
 puts receipt

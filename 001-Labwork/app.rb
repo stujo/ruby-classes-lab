@@ -13,7 +13,7 @@ items = [
 
 
 #Get the Receipt
-receipt = OrderProcessor.processOrder customer, items
+receipt = OrderProcessor.processOrder(customer, items)
 
 #Print it out!
 puts receipt
