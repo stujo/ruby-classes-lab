@@ -3,7 +3,7 @@ require 'spec_helper'
 
 check_module_defined(:OrderProcessor)
 
-describe OrderProcessor do
+describe 'OrderProcessor' do
   let!(:affluentCustomer) {
     affluentCustomer = double('affluent customer')
     affluentCustomer.stub(:full_name).and_return("William Tell")
