@@ -8,8 +8,6 @@ The 000-StarterApp folder contains a ruby application which you can run from the
 
     ruby 000-StarterApp/app.rb
 
-(You can also run it directly from the 000-StarterApp directory if you wish)
-
 ##Starter App Code Review
 
 __On your own:__ review the code in the Starter App.
@@ -24,5 +22,18 @@ __In your programming pair (or three):__
 * Discuss what could be improved about this program
 
 
+
+##Complete the Lab Steps by making the tests pass
+
+```
+# Change to the labwork directory
+cd 001-Labwork
+
+# Run the Test Suite using rspec
+rspec
+
+```
+
+Try to make the tests pass by completing the rewrite 
 
 
