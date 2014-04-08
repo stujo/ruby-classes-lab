@@ -112,7 +112,7 @@ describe "#purchases", labStep: "Store Purchase History" do
   let!(:customer) { Customer.new('Bob', 'Holly', Date.new(1965, 1, 1), 6000) }
 
   it "should be defined with attr_reader :purchases" do
-    expect(customer).to respond_to(:purchase_history).with(0).arguments
+    expect(customer).to respond_to(:purchases).with(0).arguments
   end
   it "and should return an empty array for new customers, set @purchases in #initialize" do
     customer.purchases.should eq []
