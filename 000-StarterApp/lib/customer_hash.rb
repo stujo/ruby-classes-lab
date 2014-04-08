@@ -27,7 +27,7 @@ end
 # returns: A string with the appropriate APPROVED or DECLINED
 # message for the receipt
 def attempt_credit_purchase (customer, amount, description)
-  if use_credit customer, amount
+  if use_credit(customer, amount)
 
     # TODO: Ooops I forgot to store the item description in an array for the customer!
     # You'll need to initialize the purchases array in the initialize method or

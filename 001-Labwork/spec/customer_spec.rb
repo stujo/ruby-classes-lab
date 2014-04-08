@@ -166,4 +166,3 @@ describe "#purchase_history", labStep: "Generate Purchase History" do
     customer.purchase_history.should eq history
   end
 end
-

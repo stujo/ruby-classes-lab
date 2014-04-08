@@ -18,7 +18,7 @@ def processOrder (customer, items)
   receipt.push "\nCustomer's closing credit limit is  $#{'%.2f' % available_credit(customer)}"
   receipt.push "\nPurchase History"
   receipt.push '----------------'
-  receipt.push purchase_history customer
+  receipt.push purchase_history(customer)
   receipt.push ""
   receipt.push '=' * 80
 
