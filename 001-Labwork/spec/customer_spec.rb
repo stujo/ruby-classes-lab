@@ -146,14 +146,18 @@ end
 describe "#purchase_history", labStep: "Generate Purchase History" do
   let!(:customer) { Customer.new('Wally', 'Giffen', Date.new(1980, 5, 1), 100) }
 
-  it "and should return an array with one element after 1 purchase" do
+  it "should be defined" do
+    expect(customer).to respond_to(:purchase_history).with(0).arguments
+  end
+
+  it "and should a string made up of all the purchases joined with '\\n'" do
     customer.attempt_credit_purchase 3, "Birthday Card"
     customer.purchase_history.should eq "Birthday Card"
   end
-  it "and should return an array with two elements after 2 purchases" do
+  it "and should return 'Valentine Card\\nHoliday Card'" do
     customer.attempt_credit_purchase 4, "Valentine Card"
     customer.attempt_credit_purchase 4, "Holiday Card"
-    customer.purchase_history.should eq "Valentine Card\nHoliday Card"
+    customer.purchase_history.should eq "Valentine Card\\nHoliday Card"
   end
 
   it "should not add description to the purchase history if credit was not available" do

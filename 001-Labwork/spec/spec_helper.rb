@@ -120,7 +120,7 @@ class LabTestProgressState
   #Puts Once
   def sendOneOffCompletedMessage step
     unless @stepProgress[step][:completeMessaged]
-      puts "\n'#{@stepProgress[step][:label]}' completed!"
+      puts "\nCongratulations!!!\n'#{@stepProgress[step][:label]}' completed!"
       @stepProgress[step][:completeMessaged] = true
     end
   end
