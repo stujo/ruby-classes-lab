@@ -4,22 +4,37 @@
 
 This lab is a followup to the lecture on Ruby Objects and Classes.
 
-This app processes an order from a custoer. The customer has a credit limit available to purchase items. The app takes the customer order, checks the available credit, decrements the credit available based on the order, and prints out a receipt.
+__OMG You've been hired by Better Buy a leading ecommerce company!!!__
+
+This your first day on the job and already they are throwing work at you
+
+You've been tasked to rewrite an app using Classes (maybe you've done something like this before?)
+
+###Luckily there is some documentation for the app###
+
+This app processes an order from a customer. The customer has a credit limit available to purchase items. The app takes the customer order, checks the available credit, decrements the credit available based on the order, and prints out a receipt.
 
 Initially the app uses a hash to store the customer info, the object of the lab is to replace the customer hash with a customer class object. 
 
+
+###The QA Team###
+The QA (Quality Assurance) Team is on your side, they have a whole suite of tests which are currently running against the production code. They were all passing, so all you need to do is make sure you get them going again. 
+
+###000-StarterApp
+This is the old code, which is great because all the logic you need is there!
+
+
 The 000-StarterApp folder contains a working version of the application which you should run to get a feel for how the app works. 
 
-You will do your work in the 001-Labwork folder. You can always refer the version in the 000_StarterApp folder to see how it works.
-
-    ruby 000-StarterApp/app.rb
+    # Run the Original Application
+    cd  000-StarterApp
+    ruby app.rb
 
 ##Starter App Code Review
 
 __On your own:__ review the code in the Starter App.
 
 * What is it doing?
-* What would you change and why?
 * Is there anything which you don't understand?
 
 __In your programming pair (or three):__
@@ -28,24 +43,57 @@ __In your programming pair (or three):__
 * Discuss what could be improved about this program
 
 
+###001-Labwork
+This is the folder you'll be working in. You are going to write a new version of the application here. The main `app.rb` file is already written, but none of the classes it expects are done (That is what you are going to write)
 
-##Complete the Lab Steps by completing the code to make the tests pass
+    # Run the your new code
+    cd  001-Labwork
+    
+    ruby app.rb
+    ###OOOPS! This doesn't work, we're not ready to run yet :(
+
+Since our app isn't working yet, we'll use another tool to run some tests on our
+code. That tool is RSpec, we'll be covering it in detail later on, for now, don't worry about the details, but we need to check that it's installed once:
+
+    gem install rspec
+
+After that we can just run it:
+
+    rpsec
+
+Now you'll see a lot of stuff! You can ignore most of it but we need to find this important section:
 
 ```
-# Change to the labwork directory
-cd 001-Labwork
+  Failures:
 
-# Edit the app.rb file in the 001-Labwork directory
-subl .
-
-# Run the Test Suite using rspec
-rspec
-
+  1) Customer class should exist in ''lib/customer.rb'' should be in lib/customer.rb
+     Failure/Error: expect(Object.const_defined?(class_name)).to(eq(true), "Class not defined")
+       Class not defined
+     # /Users/stuart/.rvm/gems/ruby-2.1.0/gems/rspec-expectations-2.14.5/lib/rspec/expectations/fail_with.rb:32:in `fail_with'
+    
 ```
+With RSpec this is what we care about, this is the FIRST failure we see, this is what we are going to work on FIRST (each time)
 
-Read the description that the failing test gives you and make changes accordingly.
+__Follow the Error Messages Carefully__ In this case you need to create a 'Customer' class in `lib/customer.rb` . 
 
-Workflow note: It is helpful to divide screen with editor and terminal windows.
+Do that and then run `rspec` again
+
+You will do all your work in the 001-Labwork/lib folder. 
+
+If you get stuck on method implementation, look at the implementation in the 000-StarterApp folder to see how it works.
+
+If you get stuck, ask your neighbor and then try the instructor if you're still stuck. 
+
+##Tips
+
+* Always work on the first failing test
+
+* run rspec in the 000-Labwork folder every time
+
+
+* Read the description that the failing test gives you and make changes accordingly.
+
+* Workflow note: It is helpful to divide screen with editor and terminal windows.
 
 
 
