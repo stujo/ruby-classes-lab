@@ -12,7 +12,20 @@ You've been tasked to rewrite an app using Classes (maybe you've done something 
 
 ###Luckily there is some documentation for the app###
 
-This app processes an order from a customer. The customer has a credit limit available to purchase items. The app takes the customer order, checks the available credit, decrements the credit available based on the order, and prints out a receipt.
+* This app processes an order from a Customer
+
+* The customer has a credit limit available to purchase items. 
+
+* The app takes the customer order, checks the available credit, decrements the credit available based on the order, adds the item the customers purchase history 
+
+* In the case where the item price is greater than the Customer'a available credit, the item is not purchased and is not added to the purchase history.
+
+* At the end of the order the app prints out a receipt. 
+
+* For each item in the order, a line with either APPROVED or DECLINED is printed in the receipt, depending on wether or not the Customer has enough credit for the item.
+
+* The last part of the receipt is a list of all items in the Customer's Purchase History 
+
 
 Initially the app uses a hash to store the customer info, the object of the lab is to replace the customer hash with a customer class object. 
 
@@ -102,7 +115,6 @@ Then on GitHub create a pull request back to /stujo/ruby-classes-lab
 * Always work on the first failing test
 
 * run rspec in the 000-Labwork folder every time
-
 
 * Read the description that the failing test gives you and make changes accordingly.
 
