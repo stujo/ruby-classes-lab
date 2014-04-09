@@ -84,6 +84,19 @@ If you get stuck on method implementation, look at the implementation in the 000
 
 If you get stuck, ask your neighbor and then try the instructor if you're still stuck. 
 
+##Submitting your Labwork
+
+When you are done, either all the test are passing or you are completely stuck
+
+``` 
+git add .
+git commit -m"Your Name and Cohort"
+git push
+```
+
+Then on GitHub create a pull request back to /stujo/ruby-classes-lab 
+ 
+
 ##Tips
 
 * Always work on the first failing test
