@@ -4,12 +4,9 @@ RSpec.configure do |config|
   config.mock_framework = :rspec
   RSpec.configuration.color = true
 
-  includingspec = config.backtrace_exclusion_patterns.reject { |filter|
-    puts filter
+  config.backtrace_exclusion_patterns.reject! { |filter|
     filter == /spec\/spec_helper\.rb/
   }
-
-  config.backtrace_exclusion_patterns = includingspec
 end
 
 def check_class_defined class_name
