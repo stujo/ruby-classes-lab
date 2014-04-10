@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-check_class_defined(:Customer)
 
 describe  "should be a class and have an initialize method with 4 arguments (first_name, last_name, date_of_birth, available_credit)", labStep: "Customer Basics" do
   it "and should be a class" do
