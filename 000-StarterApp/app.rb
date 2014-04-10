@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 require 'date'
 require_relative 'lib/customer_hash'
 require_relative 'lib/process_customer'
