@@ -51,4 +51,5 @@ def purchase_history()
    @purchases.join("\\n")
 end
 
+
 end
