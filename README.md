@@ -114,7 +114,9 @@ Then on GitHub create a pull request back to /stujo/ruby-classes-lab
 
 * Always work on the first failing test
 
-* run rspec in the 000-Labwork folder every time
+* run rspec in the 001-Labwork folder every time
+
+* If you get stuck on how to implement a method, go and look at the files in the 000-StarterApp folder. The logic is all there and you can mostly copy paste them __BUT__ you will need to change the way the code accesses the data. Instead of getting the information from the customer object passed in, you'll need to reference the instance methds / variables on your new class
 
 * Read the description that the failing test gives you and make changes accordingly.
 
