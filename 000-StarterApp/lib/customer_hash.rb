@@ -1,18 +1,18 @@
 require 'date'
 
-def full_name(customer)
+def full_name()
   "#{customer[:first_name]} #{customer[:last_name]}"
 end
 
-def age(customer)
+def age()
   Time.now.year - customer[:date_of_birth].year
 end
 
-def available_credit(customer)
-  customer[:credit_limit]
+def available_credit()
+  @credit_limit]
 end	
 
-def use_credit(customer, amount)
+def use_credit()
   if customer[:credit_limit] >= amount
     customer[:credit_limit]-=amount
   	true
@@ -36,13 +36,13 @@ def attempt_credit_purchase (customer, amount, description)
 
     "APPROVED: $#{'%.2f' % amount} #{description}"
   else
-    "DECLINED: $#{'%.2f' % amount} #{description} Purchase! Only $#{'%.2f' % available_credit(customer)} credit available"
+    "DECLINED: $#{'%.2f' % amount} #{description} Purchase! Only $#{'%.2f' % available_credit} credit available"
   end
 end
 
 # Should return a joined array of purchased item descriptions, each separated by "\n"
-def purchase_history(customer)
+def purchase_history
   # TODO: I should be looking at @purchases once I've converted Customer to a Class
-   "\nSorry print_purchase_history not implemented yet!"
+   @purchases.join("\\n")
 end
 
