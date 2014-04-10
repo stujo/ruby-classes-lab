@@ -1,5 +1,5 @@
 
-def processOrder (customer, items)
+def processOrder (items)
   receipt = []
   receipt.push '=' * 80
   receipt.push "\nOrder Receipt"
