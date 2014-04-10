@@ -1,7 +1,7 @@
 require 'date'
 
 def full_name(customer)
-  "#{customer[:first_name]} #{customer[:last_name]}"
+  "#{customer.first_name} #{customer.last_name}"
 end
 
 def age(customer)
