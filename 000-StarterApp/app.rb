@@ -18,7 +18,7 @@ items = [
 
 #Get the Receipt
 # The processOrder method is contained in 'lib/process_customer' file.
-receipt = processOrder(customer, items)
+receipt = OrderProcessor.processOrder (customer, items)
 
 #Print it out!
 puts receipt
