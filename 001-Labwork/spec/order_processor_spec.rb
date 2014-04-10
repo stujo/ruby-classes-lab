@@ -77,7 +77,7 @@ describe 'OrderProcessor' do
         expect(receipt).to include("ACCEPTED\nACCEPTED")
       end
       it "should include closing credit limit" do
-        expect(receipt).to include("Customer's closing credit limit is  $999999.00")
+        expect(receipt).to include("Customer's closing credit limit is $999999.00")
       end
     end
   end
