@@ -1,4 +1,6 @@
+#references a general date library for Ruby
 require 'date'
+#references specific librarys in the lib directory
 require_relative 'lib/customer_hash'
 require_relative 'lib/process_customer'
 
