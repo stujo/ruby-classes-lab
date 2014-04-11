@@ -12,7 +12,7 @@ def available_credit(customer)
   customer[:credit_limit]
 end	
 
-def use_credit(customer, amount)
+def use_credit(amount)
   if customer[:credit_limit] >= amount
     customer[:credit_limit]-=amount
   	true
